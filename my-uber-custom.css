@@ -1,0 +1,43 @@
+
+ .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active {
+
+    background: #41464b
+  
+  }
+
+  .invoice-status .nav.nav-pills a.nav-link.active {
+      color: white;
+      background-color: grey;
+  }
+
+  .invoice-status .nav.nav-pills  a.nav-link {
+    color: grey;
+    font-weight: 600;
+    padding: 0.4rem .4em;
+    font-size: 11px;
+
+  }
+
+  .invoice-status {
+      width: 300px;
+  }
+   

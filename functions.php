@@ -12,13 +12,9 @@ function my_ubereat_enqueue_style() {
 	
  		$plugin_url = plugin_dir_url( __FILE__ );
 
-		wp_register_style( 'bootstrap-style',  $plugin_url . "/assets/bootstrap/dist/css/bootstrap.min.css", false, '1.0' );
-
- 	    wp_enqueue_style( 'bootstrap-style');
-
-	    // echo 'sabre';
-     	// wp_enqueue_style( 'bootstrap-scripts',  $plugin_url . "/assets/bootstrap/dist/js/bootstrap.bundle.min.js");
-	
+		//wp_enqueue_style( 'bootstrap',  $plugin_url . "/assets/bootstrap/dist/css/bootstrap.min.css", false, '1.0' );
+ 		//wp_enqueue_style( 'my-uber-custom',  $plugin_url . "/assets/my-uber-custom.css", array('bootstrap'), '1.0.0', true);
+ 	
 }
 
 add_action( 'wp_enqueue_scripts', 'my_ubereat_enqueue_style' );

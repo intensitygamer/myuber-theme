@@ -18,66 +18,30 @@ Template name: Invoice Dashboard
     <title>Invoice Listings</title>
 
      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-
-    
+ 
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo plugin_dir_path( __FILE__ ); ?> '/assets/bootstrap/dist/css/bootstrap.min.css'; ?>" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>'/assets/bootstrap/dist/css/bootstrap.min.css'; ?>" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>'/my-uber-custom.css'; ?>" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-
-      .navbar-dark .navbar-nav .nav-link {
-        color: white;
-      }
-    
-      .navbar-dark .navbar-nav .nav-link.active {
-
-        background: #41464b
-      
-      }
-
-      .invoice-status .nav.nav-pills a.nav-link.active {
-          color: white;
-          background-color: grey;
-      }
-
-      .invoice-status .nav.nav-pills  a.nav-link {
-        color: grey;
-        font-weight: 600;
-        padding: 0.4rem .4em;
-        font-size: 11px;
-
-      }
-
-      .invoice-status {
-          width: 300px;
-      }
-       
-    </style>
-
-    
-    <!-- Custom styles for this template -->
+ 
+     <!-- Custom styles for this template -->
     <link href="bootstrap/dashboard/dashboard.css" rel="stylesheet">
 
-       
+    <?php 
+        
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $image          = wp_get_attachment_image_src( $custom_logo_id , 'thumbnail' );
+      
+        $logo           =  $image[0];
+
+    ?>
+
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Ninth navbar example">
      
         <div class="container-xl">
-        <a class="navbar-brand" href="#"> Logo here </a>
+        <a class="navbar-brand" href="#"> <img src= <?php echo $logo; ?> width="50" height="50" />  </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

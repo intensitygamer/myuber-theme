@@ -48,20 +48,20 @@ function create_invoice_listing_page(){
 
 add_action('admin_init', 'create_invoice_listing_page');
 
-
- 
 add_filter( 'page_template', 'catch_plugin_template' );
 
 function catch_plugin_template( $template ) {
     
     if( is_page('invoice-dashboard') ){
+		
+		
+		ob_start();
 
- 		//add_action( 'wp_enqueue_scripts', 'my_ubereat_enqueue_style' );
+        $template = dirname( __FILE__ ) . '\..\invoice_dashboard.php';
+	
+		ob_end_clean(); // closing and cleaning buffer
 
-
-        $template = dirname( __FILE__ ) . '\..\pages\invoice_dashboard.php';
-  	
-  	}
+   	}
     
     return $template;
 }
